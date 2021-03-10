@@ -47,6 +47,13 @@ session_start();
             <div class="col">
                  <input type="email" class="form-control" name="emailSignUp" placeholder="Enter Email Address" required="">
             </div>
+            <div class="col"> 
+                <select class="form-control" name="role" id="role" style="margin-top: 20px;">
+                    <option value="">Select User role</option>
+                    <option value="student">Student</option>
+                    <option value="admin">Administrator</option>
+                </select>
+            </div>
 
         </div>
 
@@ -59,7 +66,12 @@ session_start();
                    <input onkeyup="check();" id="conpass" type="password" class="form-control" name="conpass" placeholder="Confirm Password" required="">
                    <span id="message"></span>
 
+
+
             </div>
+               <div class="col">
+                    <a href="login.php"><p style="text-align: center; margin-top: 20px;">Already have an account login here.</p></a>
+            </div> 
 </div>
              <div class="row">
                           <div class="col">
@@ -68,9 +80,7 @@ session_start();
                   </button> 
             </div>
 
-            <div class="col">
-                    <a href="login.php"><p style="text-align: center;">Already have an account login here.</p></a>
-            </div> 
+         
              </div>
   
              

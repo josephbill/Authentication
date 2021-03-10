@@ -32,23 +32,37 @@ session_start();
         <form action="access.php" method="post">
             <h3 >
                 <?php
-                    if ($_GET['registered'] == 'true') {
-                        # code...
-                        // echo "Your account has been created";
-                          if(isset($_SESSION['userRegistered'])){
-                            echo $_SESSION['userRegistered'];
-                            unset($_SESSION['userRegistered']);
-                            session_destroy();
-             }
-                    }
+             //        if ($_GET['registered'] == 'true') {
+             //            # code...
+             //            // echo "Your account has been created";
+             //              if(isset($_SESSION['userRegistered'])){
+             //                echo $_SESSION['userRegistered'];
+             //                unset($_SESSION['userRegistered']);
+             //                session_destroy();
+             // } 
+             //        } else {
+             //            echo "Login in here";
+             //        }
                 ?>
             </h3>
+
+    <h3 style="font-family: 'Comfortaa', cursive">
+<!--            this is the message that is displayed if user enters wrong credentials-->
+            <?php
+            if (isset($_SESSION['userUnavailable']))
+            {
+                echo $_SESSION['userUnavailable'];
+                unset($_SESSION['userUnavailable']);
+                session_destroy();
+            }
+            ?>
+        </h3>
 
     	<div class="row">
     		<div class="col">
     			<input type="email"  name="emaillog" class="form-control" placeholder="Enter Email Address" required="">
                 <input type="password" class="form-control" name="passlog" placeholder="password" required="">
-                <input type="submit" name="save" value="Login" class="btn btn-success btn-block" >
+                <button  name="login_button" id="login_button"  class="btn btn-success btn-block" >Login</button>
                 <a href="signup.php"><p style="text-align: center;">Dont have an account signUp here</p></a>
     		</div>
 

@@ -17,6 +17,7 @@ if (isset($_POST['save'])) {
 	$username = $_POST['username'];
     $email = $_POST['emailSignUp'];
 	$password = $_POST['passReg'];
+	$role = $_POST['role'];
 
 
 }
@@ -34,7 +35,7 @@ $num = mysqli_num_rows($result);
  	$_SESSION['userTaken'];
  	header('location: signup.php');
  } else {
- 	$sql = "INSERT INTO users(username,email,password) VALUES ('$username','$email','$encrypted_pass')";
+ 	$sql = "INSERT INTO users(username,email,password,role) VALUES ('$username','$email','$encrypted_pass','$role')";
 
  	mysqli_query($conn,$sql);
  	// echo "registration successful";

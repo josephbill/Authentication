@@ -23,8 +23,8 @@
     			<img src="images/sec.png" width="200" height="200">
     		</div>
     		<div class="col">
-     <a href="public/authenication/login.php" class="btn btn-primary">Login</a>
-         <a class="btn btn-success" href="public/authenication/signup.php">SignUp</a>	
+     <a href="public/authentication/login.php" class="btn btn-primary">Login</a>
+         <a class="btn btn-success" href="public/authentication/signup.php">SignUp</a>	
     		</div>
     	</div>
    
